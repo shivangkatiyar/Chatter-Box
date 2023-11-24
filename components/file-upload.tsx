@@ -50,7 +50,7 @@ export const FileUpload = ({ onChange, value, endpoint }: FileUploadProps) => {
   }
   return (
     <UploadDropzone
-      endpoint="serverImage"
+      endpoint={endpoint}
       onClientUploadComplete={(res) => {
         onChange(res?.[0].url);
       }}
